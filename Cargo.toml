@@ -10,7 +10,7 @@ cortex-m-semihosting = "0.3.3"
 systick-monotonic = "1.0.0"
 heapless = "0.7.7"
 bare-metal = "1.0.0"
-external_pass = {path = "../external_pass"}
+external_rtic_pass = {git = "https://github.com/01joja/external_rtic_pass"}
 
 
 [dependencies.cortex-m-rtic]

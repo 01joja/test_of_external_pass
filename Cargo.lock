@@ -135,21 +135,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
 
 [[package]]
-name = "external_pass"
-version = "0.1.0"
-dependencies = [
- "external_pass_macro",
-]
-
-[[package]]
 name = "external_pass_macro"
 version = "0.1.0"
+source = "git+https://github.com/01joja/external_rtic_pass#e878f7a67d088ffb3dfdd5340d3b4bad0770b4fa"
 dependencies = [
  "proc-macro-error",
  "proc-macro2",
  "quote",
  "ruint-macro",
  "syn 1.0.109",
+]
+
+[[package]]
+name = "external_rtic_pass"
+version = "0.1.0"
+source = "git+https://github.com/01joja/external_rtic_pass#e878f7a67d088ffb3dfdd5340d3b4bad0770b4fa"
+dependencies = [
+ "external_pass_macro",
 ]
 
 [[package]]
@@ -565,7 +567,7 @@ dependencies = [
  "cortex-m",
  "cortex-m-rtic",
  "cortex-m-semihosting",
- "external_pass",
+ "external_rtic_pass",
  "heapless",
  "lm3s6965",
  "panic-semihosting",
